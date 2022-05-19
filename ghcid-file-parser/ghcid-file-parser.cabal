@@ -1,0 +1,64 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           ghcid-file-parser
+version:        0.0.0.0
+synopsis:       ghcid-file-parser synopsis
+description:    ghcid-file-parser description
+category:       Development
+author:         Jason Shipman
+maintainer:     Jason Shipman
+copyright:      2022 (c) Jason Shipman
+build-type:     Simple
+extra-source-files:
+    package.yaml
+
+library
+  exposed-modules:
+      GhcidFileParser
+  other-modules:
+      Paths_ghcid_file_parser
+  hs-source-dirs:
+      library
+  ghc-options: -Wall -fwarn-tabs -Wincomplete-uni-patterns -Wredundant-constraints
+  build-depends:
+      aeson
+    , attoparsec
+    , base
+    , bytestring
+    , text
+  default-language: Haskell2010
+
+executable ghcid-file-parser
+  main-is: ghcid-file-parser.hs
+  other-modules:
+      Paths_ghcid_file_parser
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -fwarn-tabs -Wincomplete-uni-patterns -Wredundant-constraints
+  build-depends:
+      base
+    , ghcid-file-parser
+  default-language: Haskell2010
+
+test-suite ghcid-file-parser-test-suite
+  type: exitcode-stdio-1.0
+  main-is: Driver.hs
+  other-modules:
+      Test.GhcidFileParserSpec
+      Paths_ghcid_file_parser
+  hs-source-dirs:
+      test-suite
+  ghc-options: -Wall -fwarn-tabs -Wincomplete-uni-patterns -Wredundant-constraints
+  build-tool-depends:
+      hspec-discover:hspec-discover
+  build-depends:
+      aeson
+    , base
+    , bytestring
+    , ghcid-file-parser
+    , hspec
+  default-language: Haskell2010
