@@ -9,12 +9,20 @@ version:        0.0.0.0
 synopsis:       ghcid-file-parser synopsis
 description:    ghcid-file-parser description
 category:       Development
+homepage:       https://github.com/jship/ghcid-file-parser#readme
+bug-reports:    https://github.com/jship/ghcid-file-parser/issues
 author:         Jason Shipman
 maintainer:     Jason Shipman
 copyright:      2022 (c) Jason Shipman
+license:        MIT
+license-file:   LICENSE.md
 build-type:     Simple
 extra-source-files:
     package.yaml
+
+source-repository head
+  type: git
+  location: https://github.com/jship/ghcid-file-parser
 
 library
   exposed-modules:

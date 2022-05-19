@@ -1,5 +1,8 @@
 name: ghcid-file-parser
 version: '0.0.0.0'
+github: "jship/ghcid-file-parser"
+license: MIT
+license-file: LICENSE.md
 copyright: 2022 (c) Jason Shipman
 author: "Jason Shipman"
 maintainer: "Jason Shipman"
