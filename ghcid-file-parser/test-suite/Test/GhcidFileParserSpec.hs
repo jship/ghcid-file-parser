@@ -24,44 +24,50 @@ spec = do
             Right ParsedFilePath
               { file = "ghcid-file-parser/library/GhcidFileParser.hs"
               , line = 27
+              , char = 3
               }
         , expectedValue =
             Just [aesonQQ|
               {
                 "file": "ghcid-file-parser/library/GhcidFileParser.hs",
-                "line": 27
+                "line": 27,
+                "char": 3
               }
             |]
         }
 
       runTest TestCase
-        { inputLine = "ghcid-file-parser/library/GhcidFileParser.hs:(211,1)-(216,31): warning: [-Wredundant-constraints]"
+        { inputLine = "ghcid-file-parser/library/GhcidFileParser.hs:(211,17)-(216,31): warning: [-Wredundant-constraints]"
         , expectedParsedFilePath =
             Right ParsedFilePath
               { file = "ghcid-file-parser/library/GhcidFileParser.hs"
               , line = 211
+              , char = 17
               }
         , expectedValue =
             Just [aesonQQ|
               {
                 "file": "ghcid-file-parser/library/GhcidFileParser.hs",
-                "line": 211
+                "line": 211,
+                "char": 17
               }
             |]
         }
 
       runTest TestCase
-        { inputLine = "ghcid-file-parser/library/GhcidFileParser.hs:42-43: (fake) warning:"
+        { inputLine = "ghcid-file-parser/library/GhcidFileParser.hs:27:3: error:"
         , expectedParsedFilePath =
             Right ParsedFilePath
               { file = "ghcid-file-parser/library/GhcidFileParser.hs"
-              , line = 42
+              , line = 27
+              , char = 3
               }
         , expectedValue =
             Just [aesonQQ|
               {
                 "file": "ghcid-file-parser/library/GhcidFileParser.hs",
-                "line": 42
+                "line": 27,
+                "char": 3
               }
             |]
         }

@@ -25,6 +25,7 @@ library:
   - attoparsec
   - base
   - bytestring
+  - directory
   - text
   source-dirs: library
 
