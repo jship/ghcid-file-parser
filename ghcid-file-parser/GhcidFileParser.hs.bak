@@ -37,6 +37,7 @@ instance ToJSON ParsedFilePath where
 
 main :: IO ()
 main = do
+  _ <- fmap BS8.words BS8.getContents
   firstLine <- BS8.getLine
   case parseFilePath firstLine of
     Left err -> do

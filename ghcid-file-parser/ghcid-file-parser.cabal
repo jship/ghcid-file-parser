@@ -26,11 +26,30 @@ source-repository head
 
 library
   exposed-modules:
-      GhcidFileParser
+      GhcidFileParser.CLI
+      GhcidFileParser.CLI.Command
+      GhcidFileParser.CLI.Command.Clean
+      GhcidFileParser.CLI.Command.Parse
+      GhcidFileParser.CLI.Config
+      GhcidFileParser.CLI.Invocation
+      GhcidFileParser.CLI.Main
+      GhcidFileParser.CLI.Parse
+      GhcidFileParser.CLI.Parse.Command
+      GhcidFileParser.CLI.Parse.Command.Clean
+      GhcidFileParser.CLI.Parse.Command.Parse
+      GhcidFileParser.CLI.Parse.Common
+      GhcidFileParser.CLI.Parse.Config
+      GhcidFileParser.CLI.Parse.Invocation
+      GhcidFileParser.CLI.Run
+      GhcidFileParser.CLI.Run.Command
+      GhcidFileParser.CLI.Run.Command.Clean
+      GhcidFileParser.CLI.Run.Command.Parse
   other-modules:
       Paths_ghcid_file_parser
   hs-source-dirs:
       library
+  default-extensions:
+      NoImplicitPrelude
   ghc-options: -Wall -fwarn-tabs -Wincomplete-uni-patterns -Wredundant-constraints
   build-depends:
       aeson
@@ -38,7 +57,12 @@ library
     , base
     , bytestring
     , directory
+    , filepath
+    , monad-logger-aeson
+    , optparse-applicative
+    , safe-exceptions
     , text
+    , time
   default-language: Haskell2010
 
 executable ghcid-file-parser
@@ -47,6 +71,8 @@ executable ghcid-file-parser
       Paths_ghcid_file_parser
   hs-source-dirs:
       app
+  default-extensions:
+      NoImplicitPrelude
   ghc-options: -Wall -fwarn-tabs -Wincomplete-uni-patterns -Wredundant-constraints
   build-depends:
       base
@@ -61,6 +87,8 @@ test-suite ghcid-file-parser-test-suite
       Paths_ghcid_file_parser
   hs-source-dirs:
       test-suite
+  default-extensions:
+      NoImplicitPrelude
   ghc-options: -Wall -fwarn-tabs -Wincomplete-uni-patterns -Wredundant-constraints
   build-tool-depends:
       hspec-discover:hspec-discover

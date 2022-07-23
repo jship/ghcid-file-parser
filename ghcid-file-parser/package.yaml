@@ -19,6 +19,9 @@ ghc-options:
   - -Wincomplete-uni-patterns
   - -Wredundant-constraints
 
+default-extensions:
+- NoImplicitPrelude
+
 library:
   dependencies:
   - aeson
@@ -26,7 +29,12 @@ library:
   - base
   - bytestring
   - directory
+  - filepath
+  - monad-logger-aeson
+  - optparse-applicative
+  - safe-exceptions
   - text
+  - time
   source-dirs: library
 
 tests:

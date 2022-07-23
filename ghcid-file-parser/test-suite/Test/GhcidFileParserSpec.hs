@@ -10,7 +10,8 @@ import Data.Aeson (Value)
 import Data.Aeson.QQ.Simple (aesonQQ)
 import Data.ByteString.Char8 (ByteString)
 import GHC.Stack (HasCallStack)
-import GhcidFileParser (ParsedFilePath(..), parseFilePath)
+import GhcidFileParser.CLI.Run.Command.Parse (ParsedFilePath(..), parseFilePath)
+import Prelude
 import Test.Hspec (Spec, describe, it, shouldBe)
 import qualified Data.Aeson as Aeson
 

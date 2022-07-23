@@ -3,7 +3,8 @@ module Main
   ( main
   ) where
 
-import qualified GhcidFileParser
+import qualified GhcidFileParser.CLI
+import Prelude
 
 main :: IO ()
-main = GhcidFileParser.main
+main = GhcidFileParser.CLI.main
