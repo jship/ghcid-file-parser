@@ -12,6 +12,7 @@ category: Development
 
 extra-source-files:
 - package.yaml
+- LICENSE.md
 
 ghc-options:
   - -Wall
