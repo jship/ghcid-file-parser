@@ -1,6 +1,6 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.35.2.
+-- This file has been generated from package.yaml by hpack version 0.36.0.
 --
 -- see: https://github.com/sol/hpack
 
@@ -9,21 +9,19 @@ version:        0.0.0.0
 synopsis:       ghcid-file-parser synopsis
 description:    ghcid-file-parser description
 category:       Development
-homepage:       https://github.com/jship/ghcid-file-parser#readme
-bug-reports:    https://github.com/jship/ghcid-file-parser/issues
 author:         Jason Shipman
 maintainer:     Jason Shipman
 copyright:      2022 (c) Jason Shipman
 license:        MIT
-license-file:   LICENSE.md
+license-file:   LICENSE.txt
 build-type:     Simple
 extra-source-files:
     package.yaml
-    LICENSE.md
+    LICENSE.txt
 
 source-repository head
   type: git
-  location: https://github.com/jship/ghcid-file-parser
+  location: https://sr.ht/~jship/ghcid-file-parser/
 
 library
   exposed-modules:
